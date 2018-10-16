@@ -11,6 +11,7 @@ namespace AIBruteForce
         public string[] Population { get; set; }
         public string ComBination { get; set; }
         public double[] Fitness { get; set; }
+        public double status { get; set; }
 
         private Random _rand;
         private int CrossoverMethod;
@@ -26,6 +27,7 @@ namespace AIBruteForce
             CrossoverMethod = crossoverMethod;
             FitnessMethod = fitnessMethod;
             _rand = new Random();
+            status = 0;
         }
         private char GetRandomChar()
         {
@@ -148,6 +150,7 @@ namespace AIBruteForce
                 {
                     if (ComBination[i] == Population[index][i]) count++;
                 }
+                if (status < count) status = count;
                 switch (FitnessMethod)
                 {
                     case 0:

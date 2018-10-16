@@ -16,7 +16,7 @@ namespace AIBruteForce
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Safe());
+            Application.Run(new AIBruteForce.Main());
         }
     }
 }
